@@ -20,8 +20,6 @@ import graphql.servlet.GraphQLErrorHandler;
 @SpringBootApplication
 public class DemoGraphQlApplication {
 
-	private Repository repo;
-	
 	public static void main(String[] args) {
 		SpringApplication.run(DemoGraphQlApplication.class, args);
 	}
@@ -51,24 +49,22 @@ public class DemoGraphQlApplication {
 	
 	@Bean
 	public Repository repo() {
-		if (repo == null)
-			repo = new DataStoreRepository();
-		return repo;
+		return new DataStoreRepository();
 	}
 
     @Bean
-	public BookResolver authorResolver() {
-		return new BookResolver(repo());
+	public BookResolver authorResolver(Repository repo) {
+		return new BookResolver(repo);
 	}
 
 	@Bean
-	public Query query() {
-		return new Query(repo());
+	public Query query(Repository repo) {
+		return new Query(repo);
 	}
 
 	@Bean
-	public Mutation mutation() {
-		return new Mutation(repo());
+	public Mutation mutation(Repository repo) {
+		return new Mutation(repo);
 	}
 
 }
