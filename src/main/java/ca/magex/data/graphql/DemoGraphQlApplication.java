@@ -10,9 +10,6 @@ import org.springframework.context.annotation.Bean;
 
 import ca.magex.data.api.repositories.Repository;
 import ca.magex.data.datastore.repositories.DataStoreRepository;
-import ca.magex.data.graphql.resolvers.BookResolver;
-import ca.magex.data.graphql.service.Mutation;
-import ca.magex.data.graphql.service.Query;
 import graphql.ExceptionWhileDataFetching;
 import graphql.GraphQLError;
 import graphql.servlet.GraphQLErrorHandler;
@@ -50,21 +47,6 @@ public class DemoGraphQlApplication {
 	@Bean
 	public Repository repo() {
 		return new DataStoreRepository();
-	}
-
-    @Bean
-	public BookResolver authorResolver(Repository repo) {
-		return new BookResolver(repo);
-	}
-
-	@Bean
-	public Query query(Repository repo) {
-		return new Query(repo);
-	}
-
-	@Bean
-	public Mutation mutation(Repository repo) {
-		return new Mutation(repo);
 	}
 
 }

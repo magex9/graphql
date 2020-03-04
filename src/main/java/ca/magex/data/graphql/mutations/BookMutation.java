@@ -1,21 +1,19 @@
-package ca.magex.data.graphql.service;
+package ca.magex.data.graphql.mutations;
+
+import org.springframework.stereotype.Component;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 
-import ca.magex.data.api.entities.Author;
 import ca.magex.data.api.entities.Book;
 import ca.magex.data.api.repositories.Repository;
 
-public class Mutation implements GraphQLMutationResolver {
+@Component
+public class BookMutation implements GraphQLMutationResolver {
 
 	private Repository repository;
 
-	public Mutation(Repository repository) {
+	public BookMutation(Repository repository) {
 		this.repository = repository;
-	}
-
-	public Author newAuthor(String firstName, String lastName) {
-		return repository.authors().save(new Author(null, firstName, lastName));
 	}
 
 	public Book newBook(String title, String isbn, Integer pageCount, String authorId) {

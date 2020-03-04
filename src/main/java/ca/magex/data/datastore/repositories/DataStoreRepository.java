@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import ca.magex.data.api.entities.Entity;
-import ca.magex.data.api.entities.Identifier;
 import ca.magex.data.api.exceptions.EntityNotFoundException;
+import ca.magex.data.api.model.Entity;
+import ca.magex.data.api.model.Identifier;
 import ca.magex.data.api.repositories.AuthorRepository;
 import ca.magex.data.api.repositories.BookRepository;
 import ca.magex.data.api.repositories.Repository;

@@ -2,7 +2,7 @@ package ca.magex.data.datastore.repositories;
 
 import ca.magex.data.api.entities.Author;
 import ca.magex.data.api.entities.Book;
-import ca.magex.data.api.entities.Identifier;
+import ca.magex.data.api.model.Identifier;
 
 public class DataStorePopulator {
 

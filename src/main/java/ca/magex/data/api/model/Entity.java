@@ -1,4 +1,4 @@
-package ca.magex.data.api.entities;
+package ca.magex.data.api.model;
 
 import java.util.Objects;
 

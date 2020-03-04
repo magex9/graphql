@@ -1,5 +1,8 @@
 package ca.magex.data.api.entities;
 
+import ca.magex.data.api.model.Entity;
+import ca.magex.data.api.model.Identifier;
+
 public class Book extends Entity {
 
 	private String title;

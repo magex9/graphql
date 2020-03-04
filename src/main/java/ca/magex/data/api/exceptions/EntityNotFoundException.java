@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ca.magex.data.api.entities.Identifier;
+import ca.magex.data.api.model.Identifier;
 import graphql.ErrorType;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;

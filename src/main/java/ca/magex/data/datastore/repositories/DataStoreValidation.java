@@ -5,7 +5,7 @@ import java.util.List;
 
 import ca.magex.data.api.entities.Author;
 import ca.magex.data.api.entities.Book;
-import ca.magex.data.api.entities.Entity;
+import ca.magex.data.api.model.Entity;
 
 public class DataStoreValidation {
 	
