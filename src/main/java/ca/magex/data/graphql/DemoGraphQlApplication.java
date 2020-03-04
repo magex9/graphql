@@ -1,4 +1,4 @@
-package ca.magex.data.graphql.service;
+package ca.magex.data.graphql;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Bean;
 import ca.magex.data.api.repositories.Repository;
 import ca.magex.data.datastore.repositories.DataStoreRepository;
 import ca.magex.data.graphql.resolvers.BookResolver;
+import ca.magex.data.graphql.service.Mutation;
+import ca.magex.data.graphql.service.Query;
 import graphql.ExceptionWhileDataFetching;
 import graphql.GraphQLError;
 import graphql.servlet.GraphQLErrorHandler;

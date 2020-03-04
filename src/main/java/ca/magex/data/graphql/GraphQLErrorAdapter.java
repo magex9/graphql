@@ -1,4 +1,4 @@
-package ca.magex.data.graphql.service;
+package ca.magex.data.graphql;
 
 import java.util.List;
 import java.util.Map;
